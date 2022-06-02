@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  background-image: url("../images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: hidden;
+}
+
+.wrapper-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 50px 260px 100px 10%;
+  width: 60%;
+  height: 100%;
+}
+
+.wrapper-left img {
+  width: 200px;
+  margin-bottom: 100px;
+}
+
+.wrapper-left .hero-mobile {
+  display: none;
+}
+
+.wrapper-left h1 {
+  color: #413a3a;
+  font-size: 64px;
+  font-weight: 600;
+  letter-spacing: 20px;
+  margin-bottom: 20px;
+}
+
+.wrapper-left h1 span {
+  color: #ce9797;
+  font-size: 64px;
+  font-weight: 100;
+}
+
+.wrapper-left p {
+  color: #ce9797;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.wrapper-left input {
+  border: 1px solid #ce9797;
+  border-radius: 30px;
+  padding: 15px 30px;
+  width: 100%;
+  vertical-align: top;
+}
+
+.wrapper-left .wrapper-error-submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: white;
+  font-size: 32px;
+  font-weight: 400;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  height: 47px;
+  padding: 5px;
+  margin-top: -47px;
+  width: 100px;
+}
+
+.wrapper-left .wrapper-error-submit .submit-button {
+  color: white;
+  font-size: 32px;
+  font-weight: 400;
+  border: none;
+  background-color: #ce9797;
+  border-radius: 30px;
+  padding: 6px 25px;
+  position: relative;
+  left: 15px;
+}
+
+.wrapper-left .wrapper-error-submit .submit-button:hover {
+  cursor: pointer;
+  background-color: #debaba;
+}
+
+.wrapper-left .wrapper-error-submit .icon-error {
+  display: none;
+  margin-top: 100px;
+  margin-right: 10px;
+  width: 30px;
+}
+
+.wrapper-left .error-message {
+  color: #f96262;
+  font-size: 16px;
+  font-weight: 400;
+  display: none;
+  margin-top: 10px;
+  padding-left: 30px;
+}
+
+.wrapper-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 40%;
+}
+
+.wrapper-right img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 985px) {
+  .container {
+    height: 960px;
+  }
+  .wrapper-left {
+    padding-right: 30px;
+  }
+  .wrapper-left h1 {
+    color: #413a3a;
+    font-size: 48px;
+    font-weight: 700;
+  }
+  .wrapper-left h1 span {
+    color: #ce9797;
+    font-size: 48px;
+    font-weight: 400;
+  }
+  .wrapper-right {
+    padding-right: 30px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .wrapper-left {
+    padding: 10px 10px;
+    width: 100%;
+  }
+  .wrapper-left img {
+    width: 150px;
+  }
+  .wrapper-left .hero-mobile {
+    display: block;
+    width: 100%;
+  }
+  .wrapper-left h1 {
+    color: #413a3a;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+  }
+  .wrapper-left h1 span {
+    color: #ce9797;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.2;
+  }
+  .wrapper-left p {
+    text-align: center;
+  }
+  .wrapper-left .error-message {
+    text-align: center;
+    padding-left: 0;
+  }
+  .wrapper-right {
+    display: none;
+  }
+}

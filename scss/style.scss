@@ -1,0 +1,176 @@
+@import 'config';
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    background-image: $bg-image-desktop;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: $font-stack;
+}
+
+.container {
+    height: 100%;
+    @include flexProperty(flex, center, center, row);
+    overflow: hidden;
+}
+
+.wrapper-left {
+    @include flexProperty(flex, null, center, column);
+    padding: 50px 260px 100px 10%;
+    width: 60%;
+    height: 100%;
+
+    img {
+        width: 200px;
+        margin-bottom: 100px;   
+    }
+
+    .hero-mobile {
+        display: none;
+    }
+
+    h1 {
+        @include textProperty($dark-grayish-red, 64px, 600, null);
+        letter-spacing: 20px;
+        margin-bottom: 20px;
+
+        span {
+            @include textProperty($desaturated-red, 64px, 100, null);
+        }
+    }
+
+    p {
+        @include textProperty($desaturated-red, 16px, 400, 1.5);
+        margin-bottom: 30px;
+    }
+
+    input {
+        border: 1px solid $desaturated-red;
+        border-radius: 30px;
+        padding: 15px 30px;
+        width: 100%;
+        vertical-align: top;
+    }
+
+    .wrapper-error-submit {
+        @include flexProperty(flex, center, center, row);
+        @include textProperty(white, 32px, 400, null);
+        align-self: flex-end;
+        height: 47px;
+        padding: 5px;
+        margin-top: -47px;
+        width: 100px;
+
+        .submit-button {
+            @include textProperty(white, 32px, 400, null);
+            border: none;
+            background-color: $desaturated-red;
+            border-radius: 30px;
+            padding: 6px 25px;
+            position: relative;
+            left: 15px;
+        }
+
+        .submit-button:hover {
+            cursor: pointer;
+            background-color: lighten($desaturated-red, 10%);
+        }
+
+        .icon-error {
+            display: none;
+            margin-top: 100px;
+            margin-right: 10px;
+            width: 30px;
+        }
+
+    }
+
+    
+    .error-message {
+        @include textProperty($soft-red, 16px, 400, null);
+        display: none;
+        margin-top: 10px;
+        padding-left: 30px;
+    }
+
+    
+
+    
+}
+
+.wrapper-right {
+    @include flexProperty(flex, center, center, null);
+    height: 100%;
+    width: 40%;
+
+    img {
+        width: 100%;
+    }
+}
+
+@media only screen and(max-width: 985px) {
+    .container {
+        height: 960px;
+    }
+
+    .wrapper-left {
+        padding-right: 30px;
+        h1 {
+            @include textProperty($dark-grayish-red, 48px, 700, null);
+
+            span {
+                @include textProperty($desaturated-red, 48px, 400, null);    
+            }
+        }
+    }
+
+    .wrapper-right {
+        padding-right: 30px;
+    }
+}
+
+@media only screen and(max-width: 767px) {
+    .wrapper-left {
+        padding: 10px 10px;
+        width: 100%;
+
+        img {
+            width: 150px;
+        }
+
+        .hero-mobile {
+            display: block;
+            width: 100%;
+        }
+    
+        h1 {
+            @include textProperty($dark-grayish-red, 32px, 700, 1.2);
+            text-align: center;
+
+            span {
+                @include textProperty($desaturated-red, 32px, 400, 1.2);    
+            }
+        }
+
+        p {
+            text-align: center;
+        }
+        
+        .error-message {
+            text-align: center;
+            padding-left: 0;
+        }
+    }
+
+
+    .wrapper-right {
+        display: none;
+    }
+
+}
